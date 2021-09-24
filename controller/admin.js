@@ -34,6 +34,8 @@ exports.postAddPlayer = (req, res, next) => {
       pageTitle: "All Player",
       path: "/adminPage",
       message: "Enter Correct Code!",
+      user: true,
+      admin: false,
     });
   }
   const data = new Player({
