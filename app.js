@@ -23,6 +23,10 @@ app.use(adminRoutes);
 app.use(audienceRoutes);
 app.use(authRoutes);
 
+app.use((req, res, next) => {
+  res.status(404).send("<h1>404 Page not found!</h1>");
+});
+
 mongoose
   .connect(
     "mongodb+srv://practice2:practice2@practice2.0c70v.mongodb.net/players?retryWrites=true&w=majority"
