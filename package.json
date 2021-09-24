@@ -1,0 +1,26 @@
+{
+  "name": "react_class_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "gh-pages": "^3.2.3",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.6",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express-handlebars": "^5.3.3"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+          <li class="main-header__item">
+            <a class="<%= path === '/' ? 'active' : '' %>" href="/"
+              >All Players</a
+            >
+          </li>
+        </ul>
+        <ul class="main-header__item-list">
+          <li class="main-header__item" style="float: right">
+            <a
+              class="<%= path === '/adminPage' ? 'active' : '' %>"
+              href="/adminPage"
+              >Admin</a
+            >
+          </li>
+          <li class="main-header__item">
+            <a
+              class="<%= path === '/addPlayer' ? 'active' : '' %>"
+              href="/addPlayer"
+              >Add Player</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <% if (players.length > 0) { %>
+      <div class="grid">
+        <% for (let player of players) { %>
+        <article class="card product-item">
+          <header class="card__header">
+            <h1 class="product__title">
+              Player: <%= player.player.playerName %>
+            </h1>
+            <h3 class="product__title">From: <%= player.player.from %></h3>
+          </header>
+          <div class="card__content">
+            <h4 class="product__price">
+              Is Playing: <%= player.player.isPlaying %>
+            </h4>
+            <h4 class="product__price">Price: <%= player.player.price %></h4>
+            <p class="product__description">
+              Description: <%= player.player.description %>
+            </p>
+          </div>
+        </article>
+        <% } %>
+      </div>
+      <% } else { %>
+      <h1>No Players Found!</h1>
+      <% } %>
+    </main>
+  </body>
+</html>
