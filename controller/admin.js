@@ -6,6 +6,8 @@ exports.getPlayers = (req, res, next) => {
       pageTitle: "All Player",
       path: "/adminPage",
       players: result,
+      user: false,
+      admin: true,
     });
   });
 };
@@ -15,6 +17,8 @@ exports.getAddPlayer = (req, res, next) => {
     pageTitle: "All Players",
     path: "/addPlayer",
     message: false,
+    user: true,
+    admin: false,
   });
 };
 
@@ -45,7 +49,7 @@ exports.postAddPlayer = (req, res, next) => {
   data
     .save()
     .then((result) => {
-      res.redirect("/adminPage");
+      res.redirect("/Players");
     })
     .catch((err) => {
       console.log(err);

@@ -13,7 +13,9 @@
       <nav class="main-header__nav">
         <ul class="main-header__item-list">
           <li class="main-header__item">
-            <a class="<%= path === '/' ? 'active' : '' %>" href="/"
+            <a
+              class="<%= path === '/Players' ? 'active' : '' %>"
+              href="/Players"
               >All Players</a
             >
           </li>
@@ -23,6 +25,9 @@
               href="/addPlayer"
               >Add Player</a
             >
+          </li>
+          <li class="main-header__item">
+            <a class="<%= path === '/' ? 'active' : '' %>" href="/">LogOut</a>
           </li>
         </ul>
       </nav>

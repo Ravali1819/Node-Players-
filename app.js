@@ -14,12 +14,14 @@ app.use(compression());
 
 const adminRoutes = require("./routes/admin");
 const audienceRoutes = require("./routes/audience");
+const authRoutes = require("./routes/auth");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(adminRoutes);
 app.use(audienceRoutes);
+app.use(authRoutes);
 
 mongoose
   .connect(

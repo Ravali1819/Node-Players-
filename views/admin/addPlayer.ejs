@@ -12,13 +12,18 @@
     <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__item-list">
+          <% if(user) { %>
           <li class="main-header__item">
-            <a class="<%= path === '/' ? 'active' : '' %>" href="/"
+            <a
+              class="<%= path === '/Players' ? 'active' : '' %>"
+              href="/Players"
               >All Players</a
             >
           </li>
+          <% } %>
         </ul>
         <ul class="main-header__item-list">
+          <% if(admin) { %>
           <li class="main-header__item">
             <a
               class="<%= path === '/adminPage' ? 'active' : '' %>"
@@ -26,12 +31,17 @@
               >Admin</a
             >
           </li>
+          <% } %> <% if(user) { %>
           <li class="main-header__item">
             <a
               class="<%= path === '/addPlayer' ? 'active' : '' %>"
               href="/addPlayer"
               >Add Player</a
             >
+          </li>
+          <% } %>
+          <li class="main-header__item">
+            <a class="<%= path === '/' ? 'active' : '' %>" href="/">LogOut</a>
           </li>
         </ul>
       </nav>

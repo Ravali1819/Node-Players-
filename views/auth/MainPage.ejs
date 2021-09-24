@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+          <li class="main-header__item">
+            <a class="<%= path === '/' ? 'active' : '' %>" href="/"
+              >Authentication</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="auth_main">
+      <form class="product-form" method="POST">
+        <div class="form-control">
+          <label for="admin">Login: </label>
+          <input
+            type="text"
+            name="admin"
+            id="admin"
+            placeholder="Enter admin or user"
+          />
+        </div>
+        <div class="form-control">
+          <label for="Password">Password</label>
+          <input type="text" name="Password" id="Password" />
+        </div>
+        <button class="btn" type="submit">Add Player</button>
+      </form>
+    </main>
+  </body>
+</html>

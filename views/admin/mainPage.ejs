@@ -10,13 +10,7 @@
   <body>
     <header class="main-header">
       <nav class="main-header__nav">
-        <ul class="main-header__item-list">
-          <li class="main-header__item">
-            <a class="<%= path === '/' ? 'active' : '' %>" href="/"
-              >All Players</a
-            >
-          </li>
-        </ul>
+        <ul class="main-header__item-list"></ul>
         <ul class="main-header__item-list">
           <li class="main-header__item" style="float: right">
             <a
@@ -25,12 +19,9 @@
               >Admin</a
             >
           </li>
+
           <li class="main-header__item">
-            <a
-              class="<%= path === '/addPlayer' ? 'active' : '' %>"
-              href="/addPlayer"
-              >Add Player</a
-            >
+            <a class="<%= path === '/' ? 'active' : '' %>" href="/">LogOut</a>
           </li>
         </ul>
       </nav>

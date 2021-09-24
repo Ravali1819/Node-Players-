@@ -1,3 +1,4 @@
+const admin = require("../models/admin");
 const Player = require("../models/admin");
 const Comment = require("../models/comments");
 
@@ -6,8 +7,10 @@ exports.getPlayers = (req, res, next) => {
   Player.find({ "player.from": teamNames }).then((result) => {
     res.render("audience/mainPage.ejs", {
       pageTitle: "All Player",
-      path: "/",
+      path: "/Players",
       players: result,
+      user: true,
+      admin: false,
     });
   });
 };
@@ -22,6 +25,8 @@ exports.getPlayerDetail = (req, res, next) => {
         path: "/playerDetail/player",
         players: players,
         comments: result,
+        user: true,
+        admin: false,
       });
     });
   });

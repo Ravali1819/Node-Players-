@@ -4,7 +4,7 @@ const router = express.Router();
 
 const audienceController = require("../controller/audience");
 
-router.get("/", audienceController.getPlayers);
+router.get("/Players", audienceController.getPlayers);
 
 router.get("/:playerId", audienceController.getPlayerDetail);
 
