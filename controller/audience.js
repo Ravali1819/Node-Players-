@@ -20,7 +20,7 @@ exports.getPlayerDetail = (req, res, next) => {
   Player.find({ "player._id": playId }).then((result) => {
     let players = result;
     Comment.find({ playerId: playId }).then((result) => {
-      res.render("audience/playerDetail.ejs", {
+      res.render("audience/PlayerDetail.ejs", {
         pageTitle: "Player Detail",
         path: "/playerDetail/player",
         players: players,
